@@ -53,9 +53,10 @@ res.clearCookie(COOKIE_NAME,{
     path:'/',
     // domain:"localhost",
     // domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
-    
+    sameSite:"none",
     httpOnly:true,
     signed:true,
+    secure:true
 })
 
 const token=createToken(user._id.toString(),user.email,"7d");
@@ -69,6 +70,8 @@ res.cookie(COOKIE_NAME,token,{
     expires,
     httpOnly:true,
     signed:true,
+    sameSite:"none",
+    secure:true,
 })
 
 
@@ -112,6 +115,8 @@ res.clearCookie(COOKIE_NAME,{
     
     httpOnly:true,
     signed:true,
+    sameSite:"none",
+    secure:true,
 })
 
 const token=createToken(user._id.toString(),user.email,"7d");
@@ -125,6 +130,8 @@ res.cookie(COOKIE_NAME,token,{
     expires,
     httpOnly:true,
     signed:true,
+    sameSite:"none",
+    secure:true,
 })
 
         return res.status(200).json({
@@ -185,6 +192,8 @@ res.clearCookie(COOKIE_NAME,{
     
     httpOnly:true,
     signed:true,
+    sameSite:"none",
+    secure:true,
 })
 
         return res.status(200).json({
