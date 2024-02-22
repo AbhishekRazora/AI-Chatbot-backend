@@ -52,7 +52,7 @@ export const userSignUp=async(req:Request,res:Response,next:NextFunction)=>{
 res.clearCookie(COOKIE_NAME,{
     path:'/',
     // domain:"localhost",
-    domain:"ai-chatbot-frontend-9jh6.onrender.com",
+    domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
     
     httpOnly:true,
     signed:true,
@@ -65,7 +65,7 @@ expires.setDate(expires.getDate()+7);
 res.cookie(COOKIE_NAME,token,{
     path:'/',
     // domain:"localhost",
-    domain:"ai-chatbot-frontend-9jh6.onrender.com",
+    domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
     expires,
     httpOnly:true,
     signed:true,
@@ -108,7 +108,7 @@ if(!isPasswordCorrect){
 res.clearCookie(COOKIE_NAME,{
     path:'/',
     // domain:"localhost",
-    domain:"ai-chatbot-frontend-9jh6.onrender.com",
+    domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
     
     httpOnly:true,
     signed:true,
@@ -121,7 +121,7 @@ expires.setDate(expires.getDate()+7);
 res.cookie(COOKIE_NAME,token,{
     path:'/',
     // domain:"localhost",
-    domain:"ai-chatbot-frontend-9jh6.onrender.com",
+    domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
     expires,
     httpOnly:true,
     signed:true,
@@ -181,7 +181,7 @@ if(user._id.toString()!== res.locals.jwtData.id){
 res.clearCookie(COOKIE_NAME,{
     path:'/',
     // domain:"localhost",
-    domain:"ai-chatbot-frontend-9jh6.onrender.com",
+    domain:"https://ai-chatbot-frontend-9jh6.onrender.com",
     
     httpOnly:true,
     signed:true,
